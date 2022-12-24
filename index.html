@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Chooser</title>
+</head>
+<body>
+  <h1>Choose a Website</h1>
+  <form>
+    <input type="submit" value="Go">
+  </form> 
+  <br>
+  <div id="website-display"></div>
+  <script>
+    var websiteHider = 1;
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var website = document.querySelector('#website-select').value;
+      document.querySelector('#website-display').innerHTML = '<iframe src="' + website + '"></iframe>';
+    });
+  </script>
+</body>
+</html>
